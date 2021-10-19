@@ -19,7 +19,7 @@ RUN dotnet publish ./source/Web/Architecture.Web.csproj -c Release -o /dist --no
 
 # Angular
 FROM node:16-alpine AS angular
-WORKDIR ./source/Web/Frontend/
+WORKDIR /source/Web/Frontend/
 COPY source/Web/Frontend/package.json ./
 RUN npm run restore
 COPY source/Web/Frontend ./
